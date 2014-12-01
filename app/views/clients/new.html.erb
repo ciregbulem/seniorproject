@@ -32,7 +32,7 @@
       <br>
       <br>
       <br>
-      <br>
+
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-8">
@@ -47,7 +47,7 @@
               <div class="panel-body">
                 <h1>Create <small>New Account</small></h1>
                 
-                <%= bootstrap_form_for :client do |f| %>
+                <%= bootstrap_form_for :client, url: clients_path do |f| %>
                 <p>
                   <%= f.text_field :fname, label: "First Name:", placeholder: "First Name" %>
                 </p>
@@ -61,11 +61,13 @@
                 </p>
                 
                 <p>
-                  <%= f.form_group :skill_level, label: { text: "Gender" } do %>
-                    <%= f.radio_button :gender, 0, label: "Male", checked: true %>
-                    <%= f.radio_button :gender, 1, label: "Female" %>
-                  <% end %>
-               </p>
+                  <%= f.password_field :password, label: "Password", placeholder: "Password", help: "Must be at least 6 characters long" %>
+                </p>
+                
+                <p>
+                  <%= f.password_field :password_confirmation, label: "Confirm Password", placeholder: "Confirm Password" %>
+                </p>
+                
                 <p>
                   <%= f.submit "Create", class: "btn btn-success btn-lg" %>
                 </p>

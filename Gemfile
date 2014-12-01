@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
+
 gem 'nokogiri'
 gem 'rack', '~>1.1'
 gem 'rspec'
 gem 'bootstrap_form'
 gem 'fitbit', '~> 0.2.0'
-gem ‘fitgem’
+gem 'fitgem', '~> 0.10.0'
+gem 'omniauth-fitbit'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -33,7 +35,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
