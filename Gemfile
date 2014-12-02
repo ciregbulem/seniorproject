@@ -9,6 +9,7 @@ gem 'fitbit', '~> 0.2.0'
 gem 'fitgem', '~> 0.10.0'
 gem 'omniauth-fitbit'
 gem 'taps', '~> 0.3.24'
+gem 'rails_12factor', group: :production
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.17.1'
