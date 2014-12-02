@@ -49,16 +49,20 @@
         </div>
       </div>   
   
-
-        <p>
-          <strong>Email:</strong>
-          <%= @client.email %>
-        </p>
-         
-        <p>
-          <strong>Password:</strong>
-          <%= @client.password %>
-        </p>
-  </div>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <div class="panel panel-info">
+            <div class="panel-heading">About</div>
+            <div class="panel-body">
+              <p>
+                <h2>Contact <small>Me</small></h2>
+                <strong>Email:</strong>
+                <%= @client.email %>
+              </p>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
