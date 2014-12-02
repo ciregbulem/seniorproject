@@ -9,6 +9,8 @@ gem 'fitbit', '~> 0.2.0'
 gem 'fitgem', '~> 0.10.0'
 gem 'omniauth-fitbit'
 
+# Use postgre as the database for Development and Production
+gem 'pg', '~> 0.17.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record

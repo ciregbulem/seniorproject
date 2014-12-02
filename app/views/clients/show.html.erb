@@ -1,5 +1,6 @@
 <html>
   <body>
+    <div>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -29,23 +30,35 @@
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
+    </div>
       <br>
       <br>
       <br>
-    <p>
-      <h1>
-      <%= @client.fname %> <small><%= @client.lname %></small>
-      </h1>
-    </p>
-     
-    <p>
-      <strong>Email:</strong>
-      <%= @client.email %>
-    </p>
-     
-    <p>
-      <strong>Password:</strong>
-      <%= @client.password %>
-    </p>
+      <br>
+    <div class="container">
+      <div class="row">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img src="" alt="profile-photo">
+            <p>
+              <h1>
+                <%= @client.fname %> <small><%= @client.lname %></small>
+              </h1>
+            </p>
+          </div>
+        </div>
+      </div>   
+  
+
+        <p>
+          <strong>Email:</strong>
+          <%= @client.email %>
+        </p>
+         
+        <p>
+          <strong>Password:</strong>
+          <%= @client.password %>
+        </p>
+  </div>
   </body>
 </html>
