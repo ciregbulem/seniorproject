@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 
 gem 'nokogiri'
@@ -11,6 +12,8 @@ gem 'omniauth-fitbit'
 gem 'taps', '~> 0.3.24'
 gem 'rails_12factor', group: :production
 gem 'sprockets_better_errors'
+# Use Unicorn webserver
+gem 'unicorn'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.17.1'
