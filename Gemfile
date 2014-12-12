@@ -8,12 +8,13 @@ gem 'rspec'
 gem 'bootstrap_form'
 gem 'fitbit', '~> 0.2.0'
 gem 'fitgem', '~> 0.10.0'
+gem 'omniauth'
 gem 'omniauth-fitbit'
 gem 'taps', '~> 0.3.24'
 gem 'rails_12factor', group: :production
-gem 'sprockets_better_errors'
+#gem 'sprockets_better_errors'
 # Use Unicorn webserver
-gem 'unicorn'
+#gem 'unicorn'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.17.1'

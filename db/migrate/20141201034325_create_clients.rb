@@ -4,7 +4,8 @@ class CreateClients < ActiveRecord::Migration
       t.string :fname
       t.string :lname
       t.string :email
-
+      t.string :city
+      t.string :state
       t.timestamps
     end
   end

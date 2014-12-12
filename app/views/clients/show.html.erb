@@ -10,15 +10,18 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Gist</a>
+            <a class="navbar-brand" href="#">
+              <img alt="Gist" src="http://i.imgur.com/dcGnzPz.png" height="23.69" width="64.93">
+            </a>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
+          <div id="navbar" class="nav navbar-top-links navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="<%= @client_path %>">Home</a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="form">
+            <ul class="nav navbar-nav pull-right"><li class=""><a href="#"><i class="fa fa-power-off"> Log Out</i></a>
+            </ul>
+            <!-- Don't need on this page
+            <form class="navbar-form navbar-right hidden-xs" role="form">
               <div class="form-group">
                 <input type="text" placeholder="Email" class="form-control">
               </div>
@@ -26,7 +29,8 @@
                 <input type="password" placeholder="Password" class="form-control">
               </div>
               <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
+            </form> -->
+          
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
@@ -37,32 +41,69 @@
       <br>
     <div class="container">
       <div class="row">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <img src="" alt="profile-photo">
-            <p>
-              <h1>
-                <%= @client.fname %> <small><%= @client.lname %></small>
-              </h1>
-            </p>
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-user fa-5x">
+                <h1>
+                  <%= @client.fname %> <small><%= @client.lname %></small>
+                </h1>
+              </i>
+            </div>
+          </div>
+          <div class="tabpanel" role="tablist">
+            <ul class="nav nav-tabs navbar navbar-default">
+              <li role="presentation" class="active"><a href="#home" role="pill" aria-controls="home" data-toggle="pill">Overview</a></li>
+              <li role="presentation"><a href="#profile" role="pill" aria-controls="profile" data-toggle="pill">Info</a></li>
+              <li role="presentation"><a href="#messages" role="pill" aria-controls="messages" data-toggle="pill">Data</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div role="pillpanel" class="tab-pane fade in active" id="home">
+                <br>
+                <div class="row">
+                  <div class="col-sm-10 col-md-10 col-lg-10">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><h2>Bonus <small>Progress</small></h2></div>
+                        <div class="panel-body">
+                          <p>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                <span class="sr-only">45% Complete</span>
+                              </div>
+                            </div>
+                            <h4>Burn 1000 more calories this month to qualify for our January bonus!</h4>
+                          </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="pillpanel" class="tab-pane fade" id="profile">
+                <br>
+                <div class="row">
+                  <div class="col-sm-6 col-md-4 col-lg-4">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><h3>Contact <small>Me</small></h3></div>
+                      <div class="panel-body">
+                        <p>
+                          <strong>Email:</strong>
+                          <%= @client.email %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="pillpanel" class="tab-pane fade panel panel-default" id="messages">
+                <br>
+
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>   
-  
-      <div class="row">
-        <div class="col-sm-4 col-md-4 col-lg-4">
-          <div class="panel panel-info">
-            <div class="panel-heading">About</div>
-            <div class="panel-body">
-              <p>
-                <h2>Contact <small>Me</small></h2>
-                <strong>Email:</strong>
-                <%= @client.email %>
-              </p>
-            </div>
-            </div>
-          </div>
-      </div>
     </div>
   </body>
 </html>

@@ -1,5 +1,6 @@
 <html>
-  <body background="http://i.imgur.com/PDNOQfO.png" style="background-position: right top;">
+  <body background="http://i.imgur.com/rNJFSI9.jpg" style="background-position: right top;">
+    <div>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -9,7 +10,9 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Gist</a>
+            <a class="navbar-brand" href="#">
+              <img alt="Gist" src="http://i.imgur.com/dcGnzPz.png" height="23.69" width="64.93">
+            </a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -17,7 +20,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="form">
+            <form class="navbar-form navbar-right hidden-xs" role="form">
               <div class="form-group">
                 <input type="text" placeholder="Email" class="form-control">
               </div>
@@ -29,20 +32,21 @@
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
+    </div>
       <br>
       <br>
       <br>
 
       <div class="container">
         <div class="row">
-          <div class="col-md-12 col-lg-8">
+          <div class=" col-md-8 col-lg-8">
             <!--<img src="http://i.imgur.com/sHCFvui.png" class="img-responsive img-thumbnail" alt="fitbit" height="62.5" width="250">-->
             <blockquote>
               <p>This could change the health insurance industry forever.</p>
               <footer>Flow from <cite title="Source Title">Progressive</cite></footer>
             </blockquote>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="panel panel-default">
               <div class="panel-body">
                 <h1>Create <small>New Account</small></h1>
@@ -69,7 +73,7 @@
                 </p>
                 
                 <p>
-                  <%= f.submit "Create", class: "btn btn-success btn-lg" %>
+                  <%= f.submit "Create", class: "btn btn-success btn-md" %>
                 </p>
               <% end %>
             </div>
