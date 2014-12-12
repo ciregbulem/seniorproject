@@ -22,6 +22,9 @@ gem 'pg', '~> 0.17.1'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.3.10'
+
+# Gem for bootstrap with sass
+gem 'bootstrap-sass', '~> 3.3.1.0'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
