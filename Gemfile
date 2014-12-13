@@ -12,6 +12,9 @@ gem 'omniauth'
 gem 'omniauth-fitbit'
 gem 'taps', '~> 0.3.24'
 gem 'rails_12factor', group: :production
+gem 'autoprefixer-rails'
+gem "font-awesome-rails"
+
 #gem 'sprockets_better_errors'
 # Use Unicorn webserver
 #gem 'unicorn'
