@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+  devise_for :clients
   get 'welcome/index'
   get 'sign_up' => 'clients#new', :as => 'sign_up'
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'users#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :clients
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root "welcome#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

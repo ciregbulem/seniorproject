@@ -1,5 +1,25 @@
 <html>
   <body background="http://i.imgur.com/FSYe5Xt.jpg" style="background-position: right top;">
+    
+    <!-- JavaScript to load Facebook SDK
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '843424195701550',
+          xfbml      : true,
+          version    : 'v2.1'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script> -->
+    
     <div>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -29,6 +49,15 @@
               </div>
               <button type="submit" class="btn btn-success">Sign in</button>
             </form>
+            <!--<button type="submit" class="btn btn-primary"
+                    onclick="FB.getLoginStatus(function(response) {
+                              if (response.status === 'connected') {
+                                console.log('Logged in.');
+                              }
+                              else {
+                                FB.login();
+                              }
+                            });"> <i class="fa fa-facebook"> Login with Facebook</i></button>-->
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
@@ -36,24 +65,27 @@
       <br>
       <br>
       <br>
-
+      <!-- Container for registration form -->
       <div class="container">
+        <!-- Row for registration form-->
         <div class="row">
+          <!-- Column for quote -->
           <div class=" col-md-8 col-lg-8">
-            <!--<img src="http://i.imgur.com/sHCFvui.png" class="img-responsive img-thumbnail" alt="fitbit" height="62.5" width="250">-->
             <blockquote>
               <p>This could change the health insurance industry forever.</p>
               <footer>Flow from <cite title="Source Title">Progressive</cite></footer>
             </blockquote>
           </div>
+          <!-- Column for registration form -->
           <div class="col-sm-12 col-md-12 col-lg-4">
             <div class="panel panel-default">
               <div class="panel-body">
                 <h1>Create <small>New Account</small></h1>
                 
                 <%= bootstrap_form_for :client, url: clients_path do |f| %>
+
                 <p>
-                  <%= f.text_field :fname, label: "First Name:", placeholder: "First Name" %>
+                  <%= f.text_field :fname, label: "First Name:", placeholder: "First Name", autofocus: true  %>
                 </p>
                 
                 <p>
@@ -61,7 +93,7 @@
                 </p>
                
                 <p>
-                  <%= f.text_field :email, prepend: "@", label: "Email", placeholder: "Email" %>
+                  <%= f.email_field :email, prepend: "@", label: "Email", placeholder: "Email"%>
                 </p>
                 
                 <p>
@@ -69,7 +101,7 @@
                 </p>
                 
                 <p>
-                  <%= f.password_field :password_confirmation, label: "Confirm Password", placeholder: "Confirm Password" %>
+                  <%= f.password_field :password_confirmation, class: "has-warning", label: "Confirm Password", placeholder: "Confirm Password" %>
                 </p>
                 
                 <p>
@@ -77,11 +109,18 @@
                 </p>
               <% end %>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-      
-      
+          </div> <!-- Panel for registration form-->
+        </div> <!-- Column for registration form -->
+      </div> <!-- Row for registration form-->
+      <footer>
+        <!--<div
+          class="fb-like"
+          data-send="true"
+          data-width="450"
+          data-show-faces="true"
+          data-layout="standard">
+        </div>-->
+      </footer>
+    </div> <!-- Container for registration form -->
   </body>
 </html>

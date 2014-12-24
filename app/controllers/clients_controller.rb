@@ -7,6 +7,7 @@ class ClientsController < ApplicationController
     @client = Client.new(client_params)
     
     if @client.save
+      @client.save
       redirect_to @client
     else
       render "new"
@@ -15,6 +16,29 @@ class ClientsController < ApplicationController
   
   def show
     @client = Client.find(params[:id])
+  end
+  
+  def index
+    @clients = Client.all
+  end
+  
+  def edit
+    @client = Client.find(params[:id])
+  end
+  
+  def update
+          @client = Client.find(params[:id])
+          
+          if @client.update(client_params)
+                  redirect_to @client
+          else
+                  render 'edit'
+          end
+  end
+  
+  def login
+    @client = Client.koala(request.env['omniauth.auth']['credentials'])
+    @client.save
   end
   
   private

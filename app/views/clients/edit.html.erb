@@ -1,0 +1,55 @@
+<html>
+  <body>
+      <div class="container-fluid">
+        <div class="row">  
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <a class="btn btn-default" role="button" href="<%= clients_path %>">Back</a>
+            </div>
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <h1>Edit</h1>
+            
+              <%= bootstrap_form_for :client, url: client_path(@client), method: :patch do |f| %>
+                  <% if @client.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(@client.errors.count, "error") %> prohibited
+                    this client from being created:</h2>
+                  
+                    <ul>
+                    <% @client.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                  <% end %>
+                <div class="col-lg-6">
+                  <p>
+                    <%= f.text_field :fname, label: "First Name", placeholder: "First Name" %>
+                  </p>
+                  <p>
+                    <%= f.text_field :lname, label: "Last Name", placeholder: "Last Name" %>
+                  </p>
+                  <p>
+                    <%= f.text_field :email, label: "Email", placeholder: "Email" %>
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    <%= f.text_field :password, type: "password", label: "New Password", placeholder: "Enter New Password" %>
+                  </p>
+                  <p>
+                    <%= f.text_field :password_confirmation, type: "password", label: "Confirm Password", placeholder: "Confirm Password" %>
+                  </p>
+                </div>
+                <p>
+                  <%= f.submit "Update", class:"btn btn-primary" %>
+                </p>
+              <% end %>
+            </div>
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            </div>  
+        </div>
+      </div>
+  </body>     
+</html>

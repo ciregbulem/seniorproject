@@ -6,14 +6,17 @@ gem 'nokogiri'
 gem 'rack', '~>1.1'
 gem 'rspec'
 gem 'bootstrap_form'
+gem "font-awesome-rails"
 gem 'fitbit', '~> 0.2.0'
 gem 'fitgem', '~> 0.10.0'
+gem 'devise'
 gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'omniauth-fitbit'
+gem "koala", "~> 1.10.0rc"
 gem 'taps', '~> 0.3.24'
 gem 'rails_12factor', group: :production
 #gem 'autoprefixer-rails'
-gem "font-awesome-rails"
 
 #gem 'sprockets_better_errors'
 # Use Unicorn webserver
